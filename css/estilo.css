@@ -77,6 +77,14 @@ footer .container {
     color: #036;
 }
 
+.menu-opcoes a:hover {
+    color: #007DC6;
+}
+
+.menu-opcoes a:active {
+    color: #7CFC00;
+}
+
 body {
     color: #333;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -117,20 +125,39 @@ body {
     text-decoration: none;
 }
 
+.menu-departamentos li ul {
+    display: none;
+}
+
+.menu-departamentos li li a::before {
+    content: '-';
+}
+
+.menu-departamentos li:hover ul {
+    display: block;
+}
+
+.menu-departamentos ul ul li{
+    background-color: #DCDCDC;
+}
+
+.busca{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .busca input[type=search] {
     width: 210px;
 }
 
-.busca button{
+.busca button {
     /* adicionando imagem */
     background-image: url(/img/busca.png);
     background-repeat: no-repeat;
     border: none;
-
     /* tamanho da imagem*/
     width: 20px;
     height: 20px;
-
     /* image replacement*/
     text-indent: -9999px;
 }
@@ -139,21 +166,24 @@ body {
     margin-top: 10px;
 }
 
-.painel {
-    margin: 10px 0;
-    padding: 10px;
-    width: 445px;
-}
-
 .novidades {
     float: left;
-    background-color: #F5DCDC; 
-
+    background-color: #F5DCDC;
+    background: linear-gradient(#F5DCDC, #BEBEF4);
 }
 
 .mais-vendidos {
     float: right;
     background-color: #DCDCF5;
+    background: linear-gradient(#DCDCF5, #F4BEBE);
+}
+
+.painel {
+    margin: 10px 0;
+    padding: 10px;
+    width: 445px;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 4px #999;
 }
 
 .painel li {
@@ -164,14 +194,22 @@ body {
     padding-bottom: 10px;
 }
 
-.painel h2{
+.painel li:hover {
+    box-shadow: 0 0 5px #333;
+    transition: all 0.7s;
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.painel h2 {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.8);
 }
 
-.painel a{
+.painel a {
     color: #333;
     font-size: 14px;
     text-align: center;

@@ -21,6 +21,18 @@ p {
     padding: 0 45px;
 }
 
+p::first-letter{
+    font-weight: bold;
+}
+
+h1 + p{
+    text-indent: 0;
+}
+
+p::first-line{
+    font-variant: small-caps;
+}
+
 figure {
     background-color: #F2EDED;
     border: 1px solid #ccc;
